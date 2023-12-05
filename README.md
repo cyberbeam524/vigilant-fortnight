@@ -1,10 +1,9 @@
 # vigilant-fortnight - OpenAI Doc Search
 
-With few annotators or domain experts we need to be selective on which data out of possibly thousands or millions of unlabelled data to choose from for labelling. Labelling is necessary for two reasons:
+Enabling context based queries using LLM models requires absorbing the document data into a searchable and retrievable format, retrieve the relevant context according to the question asked and formating the answer with proper grammer and sentence structure using well trained LLM models.
 
-Need for training data to improve models: Models may predict new data wrongly due to seeing unseen features it has not been trained on. Thus, Ground truth may differ from current model predictions.
-Need for accurate evaluation metrics: Unlabelled data cannot be used for evaluating the model on new data that may have vastly different attributes compared to old data that the model was evaluated on
-
+### Architecture diagram
+![alt text](https://github.com/cyberbeam524/vigilant-fortnight/blob/main/imgs/architecture.png)
 
 ## Dependencies
 - Flask (for serving OpenAI responses)
@@ -25,4 +24,23 @@ npm i
 npm run dev
 ```
 
-![alt text](https://github.com/cyberbeam524/fictional-octo-spoon/blob/main/imgs/ArchitectureDiagram.png)
+Enter http://localhost:3000 in browser to view frontend:
+![alt text](https://github.com/cyberbeam524/vigilant-fortnight/blob/main/imgs/landingpage.png)
+
+
+Click on search box to enter chatbot:
+![alt text](https://github.com/cyberbeam524/vigilant-fortnight/blob/main/imgs/chatbot.png)
+
+Run a query or click the sample query to try it out and click ask:
+![alt text](https://github.com/cyberbeam524/vigilant-fortnight/blob/main/imgs/queryexample.png)
+
+
+Future improvements:
+- Improving accuracy of model by adjusting:
+    -  model types (default: gpt-3.5-turbo)
+    - search_kwargs (default: 5) - for retrieving top k nearest neighbors from vectordb for using as context from documents
+    - search type (default: similarity search)
+        - mmr: maximum marginal search
+
+Credits:
+https://python.langchain.com/docs/modules/data_connection/retrievers/vectorstore
