@@ -1,4 +1,4 @@
-# vigilant-fortnight - OpenAI Doc Search
+# OpenAI Doc Search
 
 With few annotators or domain experts we need to be selective on which data out of possibly thousands or millions of unlabelled data to choose from for labelling. Labelling is necessary for two reasons:
 
